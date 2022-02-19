@@ -9,7 +9,8 @@ const router = express.Router();
 router.get('/', picturesController.getPictures);
 
 router.post('/', storage, picturesController.postPicture );
-router.post('/:id', picturesController.updatePicture );
+
+router.put('/:id', picturesController.updatePicture );
 
 router.get('/:id', picturesController.getPicture );
 

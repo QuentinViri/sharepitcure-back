@@ -70,3 +70,9 @@ exports.updatePicture = async (req, res) => {
             });
         });
 }
+
+exports.findByComment = async (req, res) => {
+    const { name } = req.body;
+    req.find()
+
+}
