@@ -8,6 +8,8 @@ const router = express.Router();
 
 router.get('/', picturesController.getPictures);
 
+router.get('/find', picturesController.findPictures );
+
 router.post('/', storage, picturesController.postPicture );
 
 router.put('/:id', picturesController.updatePicture );

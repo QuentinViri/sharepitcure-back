@@ -1,4 +1,11 @@
-const Picture = require('../models/picture');
+const Picture = require("../models/picture");
+
+exports.findPictures = async (req, res ) => {
+    const { name } = req.body;
+    const pictures  = await Picture.findOne({name: name});
+    res.status(200).json({pictures})
+}
+
 
 exports.getPictures = async (req, res) => {
     const pictures = await Picture.find();
@@ -71,8 +78,3 @@ exports.updatePicture = async (req, res) => {
         });
 }
 
-exports.findByComment = async (req, res) => {
-    const { name } = req.body;
-    req.find()
-
-}
